@@ -16,6 +16,14 @@ export const Text = ({ slice }) => {
 }
 
 export const query = graphql`
+  fragment ArticleDataBodyText on PrismicArticleDataBodyText {
+    primary {
+      columns
+      content {
+        richText
+      }
+    }
+  }
   fragment BlogDataBodyText on PrismicBlogDataBodyText {
     primary {
       columns

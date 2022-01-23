@@ -6,14 +6,16 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby + Prismic Tutorial',
-    description: 'Learn how to integrate Prismic into your Gatsby project.',
+    title: 'Francis Wang',
+    description: 'Francis Wang\'s public website.',
   },
   plugins: [
+    'gatsby-plugin-gatsby-cloud',
     {
       resolve: 'gatsby-plugin-prismic-previews',
       options: {
         repositoryName: process.env.GATSBY_PRISMIC_REPO_NAME,
+        accessToken: process.env.PRISMIC_ACCESS_TOKEN,
       },
     },
     {

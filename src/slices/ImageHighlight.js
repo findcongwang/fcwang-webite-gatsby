@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { graphql } from 'gatsby'
-import { PrismicLink, PrismicRichText } from '@prismicio/react'
+import { PrismicRichText } from '@prismicio/react'
 
 export const ImageHighlight = ({ slice }) => (
   <section className="highlight content-section">
@@ -20,6 +20,20 @@ export const ImageHighlight = ({ slice }) => (
 )
 
 export const query = graphql`
+  fragment ArticleDataBodyImageHighlight on PrismicArticleDataBodyImageHighlight {
+    primary {
+      featured_image {
+        url
+        alt
+      }
+      title {
+        richText
+      }
+      description {
+        richText
+      }
+    }
+  }
   fragment BlogDataBodyImageHighlight on PrismicBlogDataBodyImageHighlight {
     primary {
       featured_image {

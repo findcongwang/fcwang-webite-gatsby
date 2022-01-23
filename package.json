@@ -6,6 +6,7 @@
     "@fontsource/fredericka-the-great": "^4.5.0",
     "@prismicio/react": "^2.0.2",
     "gatsby": "^4.3.0",
+    "gatsby-plugin-gatsby-cloud": "^4.5.2",
     "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-image": "^2.3.0",
     "gatsby-plugin-manifest": "^4.3.0",

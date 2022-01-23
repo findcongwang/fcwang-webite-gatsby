@@ -18,6 +18,13 @@ export const FullWidthImage = ({ slice }) => (
 )
 
 export const query = graphql`
+  fragment ArticleDataBodyFullWidthImage on PrismicArticleDataBodyFullWidthImage {
+    primary {
+      full_width_image {
+        url
+      }
+    }
+  }
   fragment BlogDataBodyFullWidthImage on PrismicBlogDataBodyFullWidthImage {
     primary {
       full_width_image {

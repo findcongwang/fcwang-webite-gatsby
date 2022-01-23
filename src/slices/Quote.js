@@ -8,6 +8,13 @@ export const Quote = ({ slice }) => (
 )
 
 export const query = graphql`
+  fragment ArticleDataBodyQuote on PrismicArticleDataBodyQuote {
+    primary {
+      quote {
+        text
+      }
+    }
+  }
   fragment BlogDataBodyQuote on PrismicBlogDataBodyQuote {
     primary {
       quote {

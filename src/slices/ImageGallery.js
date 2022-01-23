@@ -24,6 +24,30 @@ export const ImageGallery = ({ slice }) => {
 }
 
 export const query = graphql`
+  fragment ArticleDataBodyImageGallery on PrismicArticleDataBodyImageGallery {
+    primary {
+      gallery_title {
+        richText
+      }
+    }
+    items {
+      image {
+        url
+        alt
+      }
+      image_description {
+        richText
+      }
+      link {
+        url
+        type
+        uid
+      }
+      link_label {
+        text
+      }
+    }
+  }
   fragment BlogDataBodyImageGallery on PrismicBlogDataBodyImageGallery {
     primary {
       gallery_title {
