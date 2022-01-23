@@ -304,8 +304,13 @@ footer a {
 
   .site-header nav li {
     display: inline-block;
+    margin-top: 15px;
     margin-left: 10px;
     margin-right: 10px;
+  }
+
+  .site-header a {
+    font-size: 14px;
   }
 
   .homepage-banner {
@@ -314,8 +319,13 @@ footer a {
   }
 
   .banner-title {
-    font-size: 50px;
+    font-size: 30px;
     line-height: 50px;
+  }
+
+  .banner-description {
+    max-width: 490px;
+    font-size: 16px;
   }
 
   .text-section-2col {
