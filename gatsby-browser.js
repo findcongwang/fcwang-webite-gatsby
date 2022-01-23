@@ -13,6 +13,7 @@ import './src/styles/style.css'
 import { linkResolver } from './src/LinkResolver'
 import HomeTemplate from './src/pages/index'
 import PageTemplate from './src/pages/{PrismicPage.url}'
+import ArticleTemplate from './src/pages/{PrismicArticle.url}'
 
 export const wrapRootElement = ({ element }) => (
   <PrismicProvider
@@ -28,6 +29,7 @@ export const wrapRootElement = ({ element }) => (
           componentResolver: componentResolverFromMap({
             homepage: HomeTemplate,
             page: PageTemplate,
+            article: ArticleTemplate,
           }),
         },
       ]}

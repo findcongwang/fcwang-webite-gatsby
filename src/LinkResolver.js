@@ -11,7 +11,7 @@ exports.linkResolver = (doc) => {
     return `/${doc.uid}`
   }
   if (doc.type === 'article') {
-    return `/blog/${doc.uid}_${doc.id}`
+    return `/blog/${doc.uid}`
   }
   return '/404'
 }
