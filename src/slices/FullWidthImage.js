@@ -5,15 +5,20 @@ import { graphql } from 'gatsby'
 
 export const FullWidthImage = ({ slice }) => (
   <section
-    className="full-width-image content-section"
-    style={{
-      backgroundImage: `url(${slice.primary.full_width_image.url})`,
-    }}
-  >
-    <img
-      src={slice.primary.full_width_image.url}
-      alt={slice.primary.full_width_image.alt}
-    />
+    className="content-section">
+    <div className="full-width-image"
+      style={{
+        backgroundImage: `url(${slice.primary.full_width_image.url})`,
+      }}
+    >
+      <img
+        src={slice.primary.full_width_image.url}
+        alt={slice.primary.full_width_image.alt}
+      />
+    </div>
+    <div className="full-image-desc">
+      {slice.primary.full_width_image.alt}
+    </div>
   </section>
 )
 

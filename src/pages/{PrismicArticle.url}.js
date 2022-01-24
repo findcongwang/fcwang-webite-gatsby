@@ -15,6 +15,7 @@ const ArticleTemplate = ({ data }) => {
   return (
     <Layout>
       <Seo title={doc.document_display_name.text} />
+      <br/>
       <SliceZone slices={doc.body} components={components} />
     </Layout>
   )

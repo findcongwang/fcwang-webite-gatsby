@@ -9,11 +9,12 @@ export const ImageHighlight = ({ slice }) => (
         src={slice.primary.featured_image.url}
         alt={slice.primary.featured_image.alt}
       />
-      <div  className="image-desc">
-        <PrismicRichText field={slice.primary.title.richText} />
+      <div className="image-desc">
+        {slice.primary.featured_image.alt}
       </div>
     </div>
     <div className="highlight-right">
+      <PrismicRichText field={slice.primary.title.richText} />
       <PrismicRichText field={slice.primary.description.richText} />
     </div>
   </section>
