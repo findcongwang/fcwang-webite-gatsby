@@ -14,7 +14,7 @@ const ArticleTemplate = ({ data }) => {
 
   return (
     <Layout>
-      <Seo title={doc.document_display_name.text} />
+      <Seo title={doc.document_display_name.text} imageUrl={doc.og_image && doc.og_image.url} />
       <br/>
       <SliceZone slices={doc.body} components={components} />
     </Layout>
@@ -28,6 +28,9 @@ export const query = graphql`
       data {
         document_display_name {
           text
+        }
+        og_image {
+          url
         }
         body {
           ... on PrismicSliceType {
